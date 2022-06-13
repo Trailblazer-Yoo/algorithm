@@ -1,0 +1,1 @@
+print(82, 'yousun9591', sep='\n')
