@@ -1,6 +1,6 @@
 V = int(input())
 vote = input()
-print(vote)
+
 result = 0
 for v in vote:
     if v == 'A':
