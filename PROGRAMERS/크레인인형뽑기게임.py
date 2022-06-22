@@ -1,29 +1,29 @@
-# def solution(board, moves):
-#     box = []
-#     b_row = len(board)
+def solution(board, moves):
+    box = []
+    b_row = len(board)
     
-#     answer = 0
-#     while moves:
-#         col = moves.pop(0) - 1
-#         row = 0
+    answer = 0
+    while moves:
+        col = moves.pop(0) - 1
+        row = 0
         
-#         while True:
-#             if row == b_row:
-#                 break
+        while True:
+            if row == b_row:
+                break
             
-#             elif board[row][col] != 0:
-#                 num = board[row][col]
-#                 board[row][col] = 0
-#                 if len(box) > 0 and box[-1] == num:
-#                     box.pop()
-#                     answer += 2
-#                 else:
-#                     box.append(num)
-#                 break
+            elif board[row][col] != 0:
+                num = board[row][col]
+                board[row][col] = 0
+                if len(box) > 0 and box[-1] == num:
+                    box.pop()
+                    answer += 2
+                else:
+                    box.append(num)
+                break
             
-#             row += 1
+            row += 1
 
-#     return answer
+    return answer
 
 
 def solution(board, moves):
