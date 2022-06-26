@@ -1,20 +1,20 @@
-# def solution(n):
-#     s = []
-#     while True:
-#         if n == 0:
-#             break
-#         qu, re = divmod(n, 3)
-#         n = qu
-#         s.append(re)
+def solution(n):
+    s = []
+    while True:
+        if n == 0:
+            break
+        qu, re = divmod(n, 3)
+        n = qu
+        s.append(re)
     
-#     cnt = 1/3
-#     answer = 0
-#     while s:
-#         tmp = s.pop()
-#         cnt *= 3
-#         answer += tmp * cnt
+    cnt = 1/3
+    answer = 0
+    while s:
+        tmp = s.pop()
+        cnt *= 3
+        answer += tmp * cnt
     
-#     return int(answer)
+    return int(answer)
 
 def solution(n):
     tmp = ''
@@ -30,7 +30,6 @@ def solution(n):
     
     
 n = 45
-print(int('032',4))
 print(solution(n))
 # a, b = divmod(n, 3)
 # print(a,b)

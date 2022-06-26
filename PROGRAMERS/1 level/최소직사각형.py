@@ -7,10 +7,12 @@ def solution(sizes):
     for size in sizes:
         hor = max(hor, size[0])
         ver = max(ver, size[1])
-    print(sizes)
-    print(hor, ver)
-    answer = 0
+
+    answer = hor * ver
     return answer
+
+def solution(sizes):
+    return max(max(x) for x in sizes) * max(min(x) for x in sizes)
 
 sizes = [[60, 50], [30, 70], [60, 30], [80, 40]]
 print(solution(sizes))

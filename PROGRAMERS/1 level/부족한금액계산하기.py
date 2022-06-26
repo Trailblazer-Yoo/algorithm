@@ -3,7 +3,10 @@ def solution(price, money, count):
     for i in range(1, count+1):
         price_all += i * price
 
-    return money - price_all
+    return price_all - money if money < price_all else 0
+
+def solution(price, money, count):
+    return max(0,price*(count+1)*count//2-money)
 
 price = 3
 money = 20
