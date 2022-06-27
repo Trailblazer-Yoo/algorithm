@@ -1,14 +1,17 @@
-from collections import deque
+import heapq
 
-def solution(scoville, K):
+def solution(scoville, k):
+    heap = []
+    for num in scoville:
+        heapq.heappush(heap, num)
+        
     answer = 0
-    while K > min(scoville):
-        print(scoville)
-        answer += 1
-        scoville = deque(sorted(scoville, reverse=True))
-        one = scoville.pop()
-        two = scoville.pop()
-        scoville.append(one + two * 2)
+    while heap[0] < k:
+        try:
+            heapq.heappush(heap, heapq.heappop(heap) + (heapq.heappop(heap) * 2))
+        except:
+            return -1
+        answer +=1
     return answer
 
 scoville = [1, 2, 3, 9, 10, 12]
